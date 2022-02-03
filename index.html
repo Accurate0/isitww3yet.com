@@ -59,7 +59,7 @@
         emoji.textContent = '😨'
       };
 
-      const resp = await fetch('http://ww3.anurag.sh/api/check').catch(onerror);
+      const resp = await fetch('https://ww3.anurag.sh/api/check').catch(onerror);
       const json = await resp.json().catch(onerror);
 
       textBox.textContent = json['status'];
