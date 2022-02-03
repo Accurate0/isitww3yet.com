@@ -18,17 +18,34 @@
     <title>is it ww3 yet?</title>
   <style>
       #root {
+        margin-top: 15vh;
+        height: 100%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        position: relative;
       }
 
-      html, body, #root {
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
+      html, body {
         font-family: 'Manrope', sans-serif;
+        overflow-x: hidden;
+      }
+
+      @media screen and (max-width: 400px) {
+        #no-text {
+          font-size: 50px !important;
+        }
+
+
+        #question {
+          font-size: 30px !important;
+        }
+
+        #emoji  {
+          font-size: 50px !important;
+        }
       }
 
       #no-text {
