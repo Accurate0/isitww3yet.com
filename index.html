@@ -49,15 +49,32 @@
         font-size: 60px;
       }
   </style>
+  <script>
+    window.onload = async function() {
+      const textBox = document.getElementById('no-text');
+      const emoji = document.getElementById('emoji');
+
+      const onerror = () => {
+        textBox.textContent = 'uh oh'
+        emoji.textContent = '😨'
+      };
+
+      const resp = await fetch('http://ww3.anurag.sh/api/check').catch(onerror);
+      const json = await resp.json().catch(onerror);
+
+      textBox.textContent = json['status'];
+      emoji.textContent = json['emoji'];
+    }
+  </script>
 </head>
   <body>
     <div id="root">
         <div id="question">
             is it ww3 yet?
         </div>
-        <a id="no-text" href="https://en.wikipedia.org/wiki/2021%E2%80%932022_Russo-Ukrainian_crisis">No</a>
+        <a id="no-text" href="https://en.wikipedia.org/wiki/2021%E2%80%932022_Russo-Ukrainian_crisis">checking...</a>
         <div id="emoji">
-            😌
+            👀
         </div>
     </div>
   </body>
