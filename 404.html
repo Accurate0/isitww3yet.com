@@ -72,16 +72,16 @@
       const textBox = document.getElementById('no-text');
       const emoji = document.getElementById('emoji');
 
-      const onerror = () => {
+      try {
+        const resp = await fetch('https://ww3.anurag.sh/api/check');
+        const json = await resp.json();
+
+        textBox.textContent = json['status'];
+        emoji.textContent = json['emoji'];
+      } catch {
         textBox.textContent = 'uh oh'
         emoji.textContent = '😨'
-      };
-
-      const resp = await fetch('https://ww3.anurag.sh/api/check').catch(onerror);
-      const json = await resp.json().catch(onerror);
-
-      textBox.textContent = json['status'];
-      emoji.textContent = json['emoji'];
+      }
     }
   </script>
 </head>
