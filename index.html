@@ -73,7 +73,7 @@
       const emoji = document.getElementById('emoji');
 
       try {
-        const resp = await fetch('https://ww3.anurag.sh/api/check');
+        const resp = await fetch('https://ww3.anurag.sh/api/status');
         const json = await resp.json();
 
         textBox.textContent = json['status'];
