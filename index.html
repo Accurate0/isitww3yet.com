@@ -33,22 +33,7 @@
         font-family: 'Manrope', sans-serif;
         overflow-x: hidden;
       }
-
-      @media screen and (max-width: 400px) {
-        #no-text {
-          font-size: 50px !important;
-        }
-
-
-        #question {
-          font-size: 30px !important;
-        }
-
-        #emoji  {
-          font-size: 50px !important;
-        }
-      }
-
+      
       #no-text {
         cursor: default;
         text-decoration: none;
@@ -65,6 +50,32 @@
 
       #emoji  {
         font-size: 60px;
+      }
+
+      @media screen and (max-width: 400px) {
+        #no-text {
+          font-size: 50px !important;
+        }
+
+
+        #question {
+          font-size: 30px !important;
+        }
+
+        #emoji  {
+          font-size: 50px !important;
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          color: white;
+          background-color: black;
+        }
+
+        #no-text {
+          color: white;
+        }
       }
   </style>
   <script>
