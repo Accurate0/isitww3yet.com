@@ -33,7 +33,7 @@
         font-family: 'Manrope', sans-serif;
         overflow-x: hidden;
       }
-      
+
       #no-text {
         cursor: default;
         text-decoration: none;
@@ -84,7 +84,7 @@
       const emoji = document.getElementById('emoji');
 
       try {
-        const resp = await fetch('https://ww3.anurag.sh/api/status');
+        const resp = await fetch('https://ww3.anurag.sh/api/v1/status');
         const json = await resp.json();
 
         textBox.textContent = json['status'];
